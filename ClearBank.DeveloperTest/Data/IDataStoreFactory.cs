@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ClearBank.DeveloperTest.Data
 {
-    internal interface IDataStoreFactory
+    public interface IDataStoreFactory
     {
         IDataStore CreateDataStore();
     }
