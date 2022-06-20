@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ClearBank.DeveloperTest.Tests
 {
-    public class PaymentServiceShould
+    internal class PaymentServiceShould
     {
     }
 }

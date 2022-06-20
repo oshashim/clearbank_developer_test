@@ -12,6 +12,8 @@ C:\Users\hashi\Downloads\clearbank_developer_test\clearbank_developer_test\Clear
 C:\Users\hashi\Downloads\clearbank_developer_test\clearbank_developer_test\ClearBank.DeveloperTest.Tests\obj\Debug\netcoreapp3.1\ClearBank.DeveloperTest.Tests.dll
 C:\Users\hashi\Downloads\clearbank_developer_test\clearbank_developer_test\ClearBank.DeveloperTest.Tests\obj\Debug\netcoreapp3.1\ClearBank.DeveloperTest.Tests.pdb
 C:\Users\hashi\source\Repos\clearbank_developer_test\ClearBank.DeveloperTest.Tests\bin\Debug\netcoreapp3.1\ClearBank.DeveloperTest.Tests.deps.json
+C:\Users\hashi\source\Repos\clearbank_developer_test\ClearBank.DeveloperTest.Tests\bin\Debug\netcoreapp3.1\ClearBank.DeveloperTest.Tests.runtimeconfig.json
+C:\Users\hashi\source\Repos\clearbank_developer_test\ClearBank.DeveloperTest.Tests\bin\Debug\netcoreapp3.1\ClearBank.DeveloperTest.Tests.runtimeconfig.dev.json
 C:\Users\hashi\source\Repos\clearbank_developer_test\ClearBank.DeveloperTest.Tests\bin\Debug\netcoreapp3.1\ClearBank.DeveloperTest.Tests.dll
 C:\Users\hashi\source\Repos\clearbank_developer_test\ClearBank.DeveloperTest.Tests\bin\Debug\netcoreapp3.1\ClearBank.DeveloperTest.Tests.pdb
 C:\Users\hashi\source\Repos\clearbank_developer_test\ClearBank.DeveloperTest.Tests\bin\Debug\netcoreapp3.1\ClearBank.DeveloperTest.dll
@@ -24,3 +26,4 @@ C:\Users\hashi\source\Repos\clearbank_developer_test\ClearBank.DeveloperTest.Tes
 C:\Users\hashi\source\Repos\clearbank_developer_test\ClearBank.DeveloperTest.Tests\obj\Debug\netcoreapp3.1\ClearBank.DeveloperTest.Tests.csproj.CopyComplete
 C:\Users\hashi\source\Repos\clearbank_developer_test\ClearBank.DeveloperTest.Tests\obj\Debug\netcoreapp3.1\ClearBank.DeveloperTest.Tests.dll
 C:\Users\hashi\source\Repos\clearbank_developer_test\ClearBank.DeveloperTest.Tests\obj\Debug\netcoreapp3.1\ClearBank.DeveloperTest.Tests.pdb
+C:\Users\hashi\source\Repos\clearbank_developer_test\ClearBank.DeveloperTest.Tests\obj\Debug\netcoreapp3.1\ClearBank.DeveloperTest.Tests.genruntimeconfig.cache
