@@ -34,22 +34,16 @@ namespace ClearBank.DeveloperTest.Services
             switch (request.PaymentScheme)
             {
                 case PaymentScheme.Bacs:
-                    if (account == null)
-                    {
-                        result.Success = false;
-                    }
-                    else if (!account.AllowedPaymentSchemes.HasFlag(AllowedPaymentSchemes.Bacs))
+                    
+                   if(!hasValidAccount(account, AllowedPaymentSchemes.Bacs))
                     {
                         result.Success = false;
                     }
                     break;
 
                 case PaymentScheme.FasterPayments:
-                    if (account == null)
-                    {
-                        result.Success = false;
-                    }
-                    else if (!account.AllowedPaymentSchemes.HasFlag(AllowedPaymentSchemes.FasterPayments))
+                    
+                    if (!hasValidAccount(account, AllowedPaymentSchemes.FasterPayments))
                     {
                         result.Success = false;
                     }
@@ -60,11 +54,7 @@ namespace ClearBank.DeveloperTest.Services
                     break;
 
                 case PaymentScheme.Chaps:
-                    if (account == null)
-                    {
-                        result.Success = false;
-                    }
-                    else if (!account.AllowedPaymentSchemes.HasFlag(AllowedPaymentSchemes.Chaps))
+                    if (!hasValidAccount(account, AllowedPaymentSchemes.Chaps))
                     {
                         result.Success = false;
                     }
@@ -77,21 +67,37 @@ namespace ClearBank.DeveloperTest.Services
 
             if (result.Success)
             {
-                account.Balance -= request.Amount;
-
-                if (dataStoreType == "Backup")
-                {
-                    var accountDataStore = new BackupAccountDataStore();
-                    accountDataStore.UpdateAccount(account);
-                }
-                else
-                {
-                    var accountDataStore = new AccountDataStore();
-                    accountDataStore.UpdateAccount(account);
-                }
+                UpdateAccount(dataStoreType, account, request.Amount);
             }
 
             return result;
+        }
+        public bool hasValidAccount(Account account, AllowedPaymentSchemes allowedPaymentSchemes)
+        {
+            if (account == null)
+            {
+                return false; ;
+            }
+            else if (!account.AllowedPaymentSchemes.HasFlag(allowedPaymentSchemes))
+            {
+                return false;
+            }
+            return true;
+        }
+        public void  UpdateAccount(string dataStoreType ,Account account,decimal amount)
+        {
+            account.Balance -= amount;
+
+            if (dataStoreType == "Backup")
+            {
+                var accountDataStore = new BackupAccountDataStore();
+                accountDataStore.UpdateAccount(account);
+            }
+            else
+            {
+                var accountDataStore = new AccountDataStore();
+                accountDataStore.UpdateAccount(account);
+            }
         }
     }
 }
