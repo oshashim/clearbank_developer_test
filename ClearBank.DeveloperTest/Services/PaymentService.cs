@@ -1,15 +1,21 @@
 ﻿using ClearBank.DeveloperTest.Data;
 using ClearBank.DeveloperTest.Types;
 using System.Configuration;
+using ClearBank.DeveloperTest.Infrastructure;
 
 namespace ClearBank.DeveloperTest.Services
 {
     public class PaymentService : IPaymentService
     {
+       
         public MakePaymentResult MakePayment(MakePaymentRequest request)
         {
             var dataStoreType = ConfigurationManager.AppSettings["DataStoreType"];
-
+            var configuration = new ClearBankConfiguration()
+            {
+                DataStoreType = ConfigurationManager.AppSettings["DataStoreType"]
+            };
+            var dataStoreFactory = new DataStoreFactory(configuration);
             Account account = null;
 
             if (dataStoreType == "Backup")
